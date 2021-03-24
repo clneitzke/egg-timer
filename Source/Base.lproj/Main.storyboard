@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="egg_timer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="egg" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="txc-wR-ddI">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="848"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="txc-wR-ddI" secondAttribute="height" multiplier="125:256" id="IL6-Fn-nPU"/>
+                                </constraints>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zai-ip-tzq">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Ovo" id="6bQ-to-YWv"/>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o02-TT-irb" userLabel="playBtn">
+                                <rect key="frame" x="132" y="293" width="150" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="1TM-MZ-3dW"/>
+                                    <constraint firstAttribute="height" constant="150" id="vJi-jD-I6g"/>
+                                </constraints>
+                                <state key="normal" image="play"/>
+                                <connections>
+                                    <action selector="playBtnClk:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7Zt-bg-4MA"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hM8-05-qlG">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="-10" id="czB-ZP-GS3">
+                                        <connections>
+                                            <action selector="minusTen:" destination="BYZ-38-t0r" id="JH6-0g-arb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="2If-Pq-8Fh"/>
+                                    <barButtonItem title="Reiniciar" id="Jhp-3W-7nm">
+                                        <connections>
+                                            <action selector="reset:" destination="BYZ-38-t0r" id="tnq-vi-Vyb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="0Cg-Ka-7Gn"/>
+                                    <barButtonItem title="+10" id="P5p-zy-8v3">
+                                        <connections>
+                                            <action selector="plusTen:" destination="BYZ-38-t0r" id="Ho2-WV-GlR"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="210" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R6P-uY-rt1">
+                                <rect key="frame" x="0.0" y="74" width="414" height="95.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="80"/>
+                                <color key="textColor" red="0.29411764709999999" green="0.46274509800000002" blue="0.91764705879999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="R6P-uY-rt1" firstAttribute="top" secondItem="zai-ip-tzq" secondAttribute="bottom" constant="30" id="3je-Xz-PhQ"/>
+                            <constraint firstItem="txc-wR-ddI" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bha-ei-5cv"/>
+                            <constraint firstItem="zai-ip-tzq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Id6-bt-Dg6"/>
+                            <constraint firstItem="txc-wR-ddI" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aFs-Xa-q5t"/>
+                            <constraint firstItem="hM8-05-qlG" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="bxS-aN-NhZ"/>
+                            <constraint firstItem="R6P-uY-rt1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eZu-YA-Vmr"/>
+                            <constraint firstItem="hM8-05-qlG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="fJi-Kg-veE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hM8-05-qlG" secondAttribute="trailing" id="fub-FX-BN6"/>
+                            <constraint firstItem="txc-wR-ddI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="hGM-Ll-w8X"/>
+                            <constraint firstItem="o02-TT-irb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hl2-1h-pwG"/>
+                            <constraint firstItem="o02-TT-irb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hsV-Xs-iAv"/>
+                            <constraint firstItem="zai-ip-tzq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rln-RQ-qtT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zai-ip-tzq" secondAttribute="trailing" id="tZ0-uO-ley"/>
+                            <constraint firstItem="R6P-uY-rt1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xj3-Ve-dhs"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="playBtn" destination="o02-TT-irb" id="GO2-dS-JQc"/>
+                        <outlet property="timerLabel" destination="R6P-uY-rt1" id="f2p-fY-cRA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="133.00492610837438"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="egg" width="3000" height="2000"/>
+        <image name="play" width="300" height="300"/>
+    </resources>
+</document>
